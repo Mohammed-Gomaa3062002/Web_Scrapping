@@ -1,0 +1,15 @@
+import requests 
+# from bs4 import BeautifulSoup 
+# import lxml 
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+driver.get("https://www.upwork.com/ab/profiles/search/?adaptive_skill_uid=1031626730384113664&q=data%20scientist")
+
+bs = BeautifulSoup(driver.page_source, "lxml")
+
+# print(bs.find("div",{"class":"full-width"}))
+
+# re = requests.get
+# print(re.content)
